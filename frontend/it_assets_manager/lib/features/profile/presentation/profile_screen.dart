@@ -111,6 +111,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             "User Type",
                             user?.userType ?? "",
                           ),
+                          _buildInfoRow(
+                            context,
+                            responsive,
+                            "Admin Status",
+                            (user?.isAdmin ?? false) ? "Yes" : "No",
+                          ),
                         ],
                       ),
                       SizedBox(height: responsive.padding),
@@ -149,6 +155,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
           responsive,
           "Station",
           profile.stationName ?? "N/A",
+        ),
+        _buildInfoRow(
+          context,
+          responsive,
+          "Province",
+          profile.provinceName ?? "N/A",
+        ),
+        _buildInfoRow(
+          context,
+          responsive,
+          "District",
+          profile.districtName ?? "N/A",
         ),
       ];
     } else if (userType == 'NGO' && profile is NGOProfile) {
