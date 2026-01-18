@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/accounts/', include('accounts.urls')),  # registration, login
     path('api/profiles/', include('profiles.urls')),  # finish profile
     path('api/locations/', include('locations.urls')), # locations (provinces, districts, stations)
+    path('api/assets/', include('assets.urls')), # assets management
 
 
     

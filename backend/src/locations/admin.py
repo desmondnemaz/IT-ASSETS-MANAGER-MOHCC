@@ -1,5 +1,16 @@
 from django.contrib import admin
-from .models import Province, District, Station
+from .models import Province, District, Station, Department
+
+
+
+# ---------------------------
+# Department Admin
+# ---------------------------
+@admin.register(Department)
+class DepartmentAdmin(admin.ModelAdmin):
+    list_display = ('department_name',)
+    search_fields = ('department_name', )
+
 
 # ---------------------------
 # Province Admin

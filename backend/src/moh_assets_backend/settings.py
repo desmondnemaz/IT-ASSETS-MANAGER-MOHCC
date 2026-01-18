@@ -42,9 +42,11 @@ INSTALLED_APPS = [
     'rest_framework',
     "corsheaders",
     "django_extensions",
+    "django_filters",
     'locations',
     'accounts',
     "profiles",
+    "assets",
     # jwt-apps
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
